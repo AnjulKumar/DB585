@@ -1,5 +1,5 @@
 ANJUL KUMAR
-4141713377
+
 anjulkum@usc.edu
 --------------------------------------------------------------------------
 Please follow the steps to run program:
@@ -18,40 +18,40 @@ $java hw2 query type [object type other parameters|demo number]
 
 The Query type parameter can only take one of the following values: window, within, nn or demo.
 In the former 3 cases, we need to specify object type and other parameters as follows:
-• If query type = window: we perform a window query in this case. That is, finding all
+â€¢ If query type = window: we perform a window query in this case. That is, finding all
 objects that are completely inside the query window. The object type parameter specifies what
 kind of objects we are looking for, which can only take one value from building, firehydrant,
 firebuilding, which stands for buildings that are not on fire, firehydrants and buildings that are on
 fire, respectively. other parameters specifies the coordinates of the lower left and upper right vertices
 of query window, respectively. For example, the query
 $java hw2 window firebuilding 10 20 300 500
-lists the ID’s of all buildings on fire that are completely inside the query window with lower left vertex
+lists the IDâ€™s of all buildings on fire that are completely inside the query window with lower left vertex
 (10, 20) and upper right vertex (300, 500).
-• If query type = within: we do a within-distance query in this case. That is, finding all
+â€¢ If query type = within: we do a within-distance query in this case. That is, finding all
 objects that are within the given distance to the given object(s). In this case, object type is the
 same as above, and other parameters specifies the name of the query building and the distance. For
 example, the query
 $java hw2 within firehydrant OHE 250
-lists the ID’s of all firehydrants that are within distance 250 to all buildings named OHE.
-• If query type = nn: we do a nearest neighbor query in this case. That is, find the nearest
+lists the IDâ€™s of all firehydrants that are within distance 250 to all buildings named OHE.
+â€¢ If query type = nn: we do a nearest neighbor query in this case. That is, find the nearest
 k objects to a given object. In this case, object type is the same as above and other parameters
 specifies the ID of a building and k, the number of nearest neighbors. For example, the query
 $java hw2 nn building b3 5
-lists the ID’s of the 5 nearest buildings to b3.
-• If query type = demo: in this case we print the results of the following hard-
+lists the IDâ€™s of the 5 nearest buildings to b3.
+â€¢ If query type = demo: in this case we print the results of the following hard-
 coded demos on the screen. In this case the only supplementary input parameter is demo number,
 which specifies the demo result to be displayed on the screen. For example,
 $java hw2 demo 3
 displays the result of demo 3 on the screen. 
 The demos are as follows:
 
-1. Find the names of the buildings with name initial ’S’ that are NOT on fire.
-2. For each building on fire, list its name and the ID’s of the 5 nearest firehydrants.
-3. We say a firehydrant covers a building if it is within distance 120 to that building. Find the ID’s
+1. Find the names of the buildings with name initial â€™Sâ€™ that are NOT on fire.
+2. For each building on fire, list its name and the IDâ€™s of the 5 nearest firehydrants.
+3. We say a firehydrant covers a building if it is within distance 120 to that building. Find the IDâ€™s
 of the firehydrants that cover the most buildings.
-4. We say a firehydrant is called a reverse nearest neighbor of a building if it is that building’s nearest
-firehydrant. Find the ID’s of the top 5 firehydrants that have the most reverse nearest neighbors
+4. We say a firehydrant is called a reverse nearest neighbor of a building if it is that buildingâ€™s nearest
+firehydrant. Find the IDâ€™s of the top 5 firehydrants that have the most reverse nearest neighbors
 together with their number of reverse nearest neighbors.
 5. Find the coordinates of the lower left and upper right vertex of the MBR that fully contains all
-buildings whose names are of the form ’%HE’. Note that you cannot manually figure out these
+buildings whose names are of the form â€™%HEâ€™. Note that you cannot manually figure out these
 buildings in your program.
